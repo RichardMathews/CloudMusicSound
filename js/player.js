@@ -90,7 +90,7 @@ var Player = (function (window, document) {
             if (audio.src == "") return false;
 
             Player.isPlaying = true;
-            audio.play(); //metodo nativo do objeto HTMLAudioElement
+            audio.play(); 
 
             flip.classList.add('hover');
 
@@ -103,7 +103,7 @@ var Player = (function (window, document) {
             if (audio.src == "") return false;
 
             Player.isPlaying = false;
-            audio.pause(); //metodo nativo do objeto HTMLAudioElement
+            audio.pause();
             
             flip.classList.remove('hover');
             document.querySelector("#list-icon-"+Player.currentTrack).classList.remove("playing");
@@ -209,8 +209,6 @@ var Player = (function (window, document) {
                 span.innerHTML = "<span class='bar'></span><span class='bar'></span><span class='bar'></span>";
 
                 li.setAttribute("class", "list-item");
-                // li.appendChild(button);
-                // li.appendChild(musicName);
                 li.appendChild(span);
                 playListElement.appendChild(li);
 
