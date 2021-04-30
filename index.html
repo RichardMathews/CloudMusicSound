@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link type="text/css" rel="stylesheet" href="css/structure.css">
+  <link type="text/css" rel="stylesheet" href="css/components.css">
+  <link type="text/css" rel="stylesheet" href="css/icons.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="img/icon.ico">
+  <title>Sound Music</title>
+</head>
+<body>
+
+  <div class="container1">
+    <div class="upload-wrap">
+      <form name="form_upload">
+          <input type="file" id="file-element" accept="audio/mp3" multiple style="display:none;" />
+          <button type="button" id="btn-upload" class="btn btn-header" title="Adicionar Músicas"><span class="icon icon-music"></span>Upload Here</button>
+      </form>
+  </div>
+  
+    <div class="navbar">
+      <img src="img/logo.png" class="logo">
+      <ul class="lista">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">SPECIFICATIONS</a></li>
+        <li><a href="#">PRODUCTS</a></li>
+        <li><a href="#">CONNECT</a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <section class="play-list-wrap">
+          <ul class="play-list" id="play-list"></ul>
+      </section>
+
+      <section class="player-wrap">
+  
+          <audio id="player" preload="auto">Seu browser não suporta reprodução de áudio.</audio>
+  
+          <div class="controls-wrap">
+              <button type="button" class="btn player-btn icon icon-repeat" id="repeat"></button>
+              <button type="button" class="btn player-btn icon icon-chevron-left" id="prev"></button>
+              <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+                  <div class="flipper">
+                      <div class="front">
+                          <button type="button" class="btn player-btn icon icon-play large"  id="btn-play"></button>
+                      </div>
+                      <div class="back">
+                          <button type="button" class="btn player-btn icon icon-pause large" id="btn-pause"></button>
+                      </div>
+                  </div>
+              </div>
+              <button type="button" class="btn player-btn icon icon-chevron-right" id="next"></button>
+              <button type="button" class="btn player-btn icon icon-random"        id="random"></button>
+          </div>  
+          
+          <div class="music-info">
+              <div class="loading-wrap">
+                  <span id="loading-music" class="loading">Carregando...</span>
+              </div>
+              <label id="music-name"> </label>
+          </div>
+  
+          <div class="timeline-wrap">
+              <label id="time-count">00:00</label>
+              <input type="range" class="range opaque" min="0" max="100" id="timeline" value="0" step="any">
+              <label id="time">00:00</label>
+  
+              <div class="volume-wrap">
+                  <button type="button" class="btn-volume btn player-btn small icon icon-volume-down"></button>
+                  <span class="volume-box">
+                      <input type="range" class="range" min="0" max="10" id="volume" value="10">
+                  </span>
+              </div>
+          </div>
+  
+      </section>
+  
+  </div>
+  <script type="text/javascript" src="js/player.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+    
+    <div class="content">
+      <div class="left-col">
+        <h1>THE<br>REAL<br>SOUND</h1>
+      </div>
+  <script src="index.js"></script>
+</body>
+</html>
